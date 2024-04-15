@@ -48,6 +48,7 @@
 		8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8DD2BCD80BF00E51EBD /* DataTaskExecutor.swift */; };
 		8945B8E02BCD821700E51EBD /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8DF2BCD821700E51EBD /* URLRequestBuilder.swift */; };
 		8945B8E22BCD825700E51EBD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E12BCD825700E51EBD /* NetworkService.swift */; };
+		8945B8E42BCD84EC00E51EBD /* ImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E32BCD84EC00E51EBD /* ImageURLBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		8945B8DD2BCD80BF00E51EBD /* DataTaskExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskExecutor.swift; sourceTree = "<group>"; };
 		8945B8DF2BCD821700E51EBD /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		8945B8E12BCD825700E51EBD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8945B8E32BCD84EC00E51EBD /* ImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8945B89D2BCD6B5E00E51EBD /* Networking */,
+				8945B8E32BCD84EC00E51EBD /* ImageURLBuilder.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				8945B8D92BCD745600E51EBD /* DataDecoder.swift in Sources */,
 				8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */,
+				8945B8E42BCD84EC00E51EBD /* ImageURLBuilder.swift in Sources */,
 				8945B8CE2BCD6D5200E51EBD /* ReviewsEndpoint.swift in Sources */,
 				8945B8A72BCD6B9600E51EBD /* ItemCastResponseDTO.swift in Sources */,
 				8945B8BF2BCD6D2B00E51EBD /* SearchMoviesEndpoint.swift in Sources */,

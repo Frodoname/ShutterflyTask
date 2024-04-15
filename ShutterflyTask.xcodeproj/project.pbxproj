@@ -10,10 +10,22 @@
 		8945B8592BCD4F2600E51EBD /* ShutterflyTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8582BCD4F2600E51EBD /* ShutterflyTaskApp.swift */; };
 		8945B85B2BCD4F2600E51EBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B85A2BCD4F2600E51EBD /* ContentView.swift */; };
 		8945B85D2BCD4F2800E51EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945B85C2BCD4F2800E51EBD /* Assets.xcassets */; };
-		8945B8602BCD4F2800E51EBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945B85F2BCD4F2800E51EBD /* Preview Assets.xcassets */; };
 		8945B8682BCD4F4900E51EBD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8945B8672BCD4F4900E51EBD /* ComposableArchitecture */; };
 		8945B87C2BCD606600E51EBD /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B87B2BCD606600E51EBD /* Strings+Generated.swift */; };
 		8945B8822BCD658900E51EBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8945B8812BCD658900E51EBD /* Localizable.strings */; };
+		8945B88C2BCD672100E51EBD /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B88B2BCD672100E51EBD /* TVShow.swift */; };
+		8945B88E2BCD672B00E51EBD /* EntertainmentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B88D2BCD672B00E51EBD /* EntertainmentDetails.swift */; };
+		8945B8902BCD672F00E51EBD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B88F2BCD672F00E51EBD /* Review.swift */; };
+		8945B8922BCD673500E51EBD /* CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8912BCD673500E51EBD /* CastMember.swift */; };
+		8945B8962BCD675400E51EBD /* Entertainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8952BCD675400E51EBD /* Entertainment.swift */; };
+		8945B8992BCD677300E51EBD /* EntertainmentContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8982BCD677300E51EBD /* EntertainmentContent.swift */; };
+		8945B89B2BCD6A5200E51EBD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B89A2BCD6A5200E51EBD /* Movie.swift */; };
+		8945B8A62BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A02BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift */; };
+		8945B8A72BCD6B9600E51EBD /* ItemCastResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A12BCD6B9600E51EBD /* ItemCastResponseDTO.swift */; };
+		8945B8A82BCD6B9600E51EBD /* TVShowResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A22BCD6B9600E51EBD /* TVShowResponseDTO.swift */; };
+		8945B8A92BCD6B9600E51EBD /* MovieResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A32BCD6B9600E51EBD /* MovieResponseDTO.swift */; };
+		8945B8AA2BCD6B9600E51EBD /* ItemDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A42BCD6B9600E51EBD /* ItemDetailsDTO.swift */; };
+		8945B8AB2BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8A52BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +33,21 @@
 		8945B8582BCD4F2600E51EBD /* ShutterflyTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterflyTaskApp.swift; sourceTree = "<group>"; };
 		8945B85A2BCD4F2600E51EBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8945B85C2BCD4F2800E51EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8945B85F2BCD4F2800E51EBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8945B87B2BCD606600E51EBD /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		8945B8812BCD658900E51EBD /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8945B88B2BCD672100E51EBD /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		8945B88D2BCD672B00E51EBD /* EntertainmentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetails.swift; sourceTree = "<group>"; };
+		8945B88F2BCD672F00E51EBD /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		8945B8912BCD673500E51EBD /* CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMember.swift; sourceTree = "<group>"; };
+		8945B8952BCD675400E51EBD /* Entertainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entertainment.swift; sourceTree = "<group>"; };
+		8945B8982BCD677300E51EBD /* EntertainmentContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentContent.swift; sourceTree = "<group>"; };
+		8945B89A2BCD6A5200E51EBD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8945B8A02BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieReviewsResponseDTO.swift; sourceTree = "<group>"; };
+		8945B8A12BCD6B9600E51EBD /* ItemCastResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCastResponseDTO.swift; sourceTree = "<group>"; };
+		8945B8A22BCD6B9600E51EBD /* TVShowResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowResponseDTO.swift; sourceTree = "<group>"; };
+		8945B8A32BCD6B9600E51EBD /* MovieResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResponseDTO.swift; sourceTree = "<group>"; };
+		8945B8A42BCD6B9600E51EBD /* ItemDetailsDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsDTO.swift; sourceTree = "<group>"; };
+		8945B8A52BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesSearchResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,25 +81,19 @@
 		8945B8572BCD4F2600E51EBD /* ShutterflyTask */ = {
 			isa = PBXGroup;
 			children = (
+				8945B89C2BCD6B4F00E51EBD /* Service */,
+				8945B8972BCD676E00E51EBD /* Protocol */,
+				8945B8852BCD66E400E51EBD /* Model */,
 				8945B8692BCD53BF00E51EBD /* Application */,
-				8945B8582BCD4F2600E51EBD /* ShutterflyTaskApp.swift */,
-				8945B85A2BCD4F2600E51EBD /* ContentView.swift */,
-				8945B85E2BCD4F2800E51EBD /* Preview Content */,
+				8945B8832BCD669400E51EBD /* UI */,
 			);
 			path = ShutterflyTask;
-			sourceTree = "<group>";
-		};
-		8945B85E2BCD4F2800E51EBD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				8945B85F2BCD4F2800E51EBD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		8945B8692BCD53BF00E51EBD /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				8945B8582BCD4F2600E51EBD /* ShutterflyTaskApp.swift */,
 				8945B86A2BCD53CB00E51EBD /* Resource */,
 			);
 			path = Application;
@@ -97,6 +115,80 @@
 				8945B87B2BCD606600E51EBD /* Strings+Generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		8945B8832BCD669400E51EBD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8842BCD669800E51EBD /* User Stories */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8945B8842BCD669800E51EBD /* User Stories */ = {
+			isa = PBXGroup;
+			children = (
+				8945B85A2BCD4F2600E51EBD /* ContentView.swift */,
+			);
+			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		8945B8852BCD66E400E51EBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8945B88B2BCD672100E51EBD /* TVShow.swift */,
+				8945B89A2BCD6A5200E51EBD /* Movie.swift */,
+				8945B88D2BCD672B00E51EBD /* EntertainmentDetails.swift */,
+				8945B88F2BCD672F00E51EBD /* Review.swift */,
+				8945B8912BCD673500E51EBD /* CastMember.swift */,
+				8945B8952BCD675400E51EBD /* Entertainment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8945B8972BCD676E00E51EBD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8982BCD677300E51EBD /* EntertainmentContent.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		8945B89C2BCD6B4F00E51EBD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8945B89D2BCD6B5E00E51EBD /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8945B89D2BCD6B5E00E51EBD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8945B89E2BCD6B6600E51EBD /* Model */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8945B89E2BCD6B6600E51EBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8945B89F2BCD6B6E00E51EBD /* Decodable */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8945B89F2BCD6B6E00E51EBD /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8A12BCD6B9600E51EBD /* ItemCastResponseDTO.swift */,
+				8945B8A42BCD6B9600E51EBD /* ItemDetailsDTO.swift */,
+				8945B8A32BCD6B9600E51EBD /* MovieResponseDTO.swift */,
+				8945B8A02BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift */,
+				8945B8A52BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift */,
+				8945B8A22BCD6B9600E51EBD /* TVShowResponseDTO.swift */,
+			);
+			path = Decodable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8945B8602BCD4F2800E51EBD /* Preview Assets.xcassets in Resources */,
 				8945B8822BCD658900E51EBD /* Localizable.strings in Resources */,
 				8945B85D2BCD4F2800E51EBD /* Assets.xcassets in Resources */,
 			);
@@ -176,9 +267,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8945B8A72BCD6B9600E51EBD /* ItemCastResponseDTO.swift in Sources */,
+				8945B8A92BCD6B9600E51EBD /* MovieResponseDTO.swift in Sources */,
+				8945B8962BCD675400E51EBD /* Entertainment.swift in Sources */,
+				8945B8A82BCD6B9600E51EBD /* TVShowResponseDTO.swift in Sources */,
 				8945B85B2BCD4F2600E51EBD /* ContentView.swift in Sources */,
 				8945B8592BCD4F2600E51EBD /* ShutterflyTaskApp.swift in Sources */,
+				8945B8902BCD672F00E51EBD /* Review.swift in Sources */,
+				8945B8AB2BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift in Sources */,
+				8945B88E2BCD672B00E51EBD /* EntertainmentDetails.swift in Sources */,
+				8945B8A62BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift in Sources */,
+				8945B88C2BCD672100E51EBD /* TVShow.swift in Sources */,
+				8945B8922BCD673500E51EBD /* CastMember.swift in Sources */,
 				8945B87C2BCD606600E51EBD /* Strings+Generated.swift in Sources */,
+				8945B8AA2BCD6B9600E51EBD /* ItemDetailsDTO.swift in Sources */,
+				8945B89B2BCD6A5200E51EBD /* Movie.swift in Sources */,
+				8945B8992BCD677300E51EBD /* EntertainmentContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +415,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ShutterflyTask/Preview Content\"";
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -340,7 +443,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ShutterflyTask/Preview Content\"";
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

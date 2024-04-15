@@ -43,6 +43,11 @@
 		8945B8D42BCD742C00E51EBD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D12BCD742C00E51EBD /* APIError.swift */; };
 		8945B8D52BCD742C00E51EBD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */; };
 		8945B8D62BCD742C00E51EBD /* APIProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D32BCD742C00E51EBD /* APIProviderError.swift */; };
+		8945B8D92BCD745600E51EBD /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D82BCD745600E51EBD /* DataDecoder.swift */; };
+		8945B8DC2BCD750E00E51EBD /* DependencyValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8DB2BCD750E00E51EBD /* DependencyValues+Extension.swift */; };
+		8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8DD2BCD80BF00E51EBD /* DataTaskExecutor.swift */; };
+		8945B8E02BCD821700E51EBD /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8DF2BCD821700E51EBD /* URLRequestBuilder.swift */; };
+		8945B8E22BCD825700E51EBD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E12BCD825700E51EBD /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +87,11 @@
 		8945B8D12BCD742C00E51EBD /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		8945B8D32BCD742C00E51EBD /* APIProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviderError.swift; sourceTree = "<group>"; };
+		8945B8D82BCD745600E51EBD /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		8945B8DB2BCD750E00E51EBD /* DependencyValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyValues+Extension.swift"; sourceTree = "<group>"; };
+		8945B8DD2BCD80BF00E51EBD /* DataTaskExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskExecutor.swift; sourceTree = "<group>"; };
+		8945B8DF2BCD821700E51EBD /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		8945B8E12BCD825700E51EBD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		8945B8572BCD4F2600E51EBD /* ShutterflyTask */ = {
 			isa = PBXGroup;
 			children = (
+				8945B8DA2BCD74FD00E51EBD /* Extension */,
 				8945B89C2BCD6B4F00E51EBD /* Service */,
 				8945B8972BCD676E00E51EBD /* Protocol */,
 				8945B8852BCD66E400E51EBD /* Model */,
@@ -199,8 +210,11 @@
 		8945B89D2BCD6B5E00E51EBD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8945B8D02BCD741D00E51EBD /* Error */,
+				8945B8D72BCD744B00E51EBD /* Utilities */,
 				8945B8AC2BCD6C1D00E51EBD /* Endpoint */,
 				8945B89E2BCD6B6600E51EBD /* Model */,
+				8945B8E12BCD825700E51EBD /* NetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -229,7 +243,6 @@
 		8945B8AC2BCD6C1D00E51EBD /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
-				8945B8D02BCD741D00E51EBD /* Error */,
 				8945B8B12BCD6C3D00E51EBD /* Configuration */,
 				8945B8B42BCD6CED00E51EBD /* Implementation  */,
 			);
@@ -296,6 +309,24 @@
 				8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		8945B8D72BCD744B00E51EBD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8D82BCD745600E51EBD /* DataDecoder.swift */,
+				8945B8DD2BCD80BF00E51EBD /* DataTaskExecutor.swift */,
+				8945B8DF2BCD821700E51EBD /* URLRequestBuilder.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8945B8DA2BCD74FD00E51EBD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8DB2BCD750E00E51EBD /* DependencyValues+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8945B8D92BCD745600E51EBD /* DataDecoder.swift in Sources */,
+				8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */,
 				8945B8CE2BCD6D5200E51EBD /* ReviewsEndpoint.swift in Sources */,
 				8945B8A72BCD6B9600E51EBD /* ItemCastResponseDTO.swift in Sources */,
 				8945B8BF2BCD6D2B00E51EBD /* SearchMoviesEndpoint.swift in Sources */,
@@ -383,6 +416,7 @@
 				8945B8962BCD675400E51EBD /* Entertainment.swift in Sources */,
 				8945B8A82BCD6B9600E51EBD /* TVShowResponseDTO.swift in Sources */,
 				8945B85B2BCD4F2600E51EBD /* ContentView.swift in Sources */,
+				8945B8E02BCD821700E51EBD /* URLRequestBuilder.swift in Sources */,
 				8945B8C02BCD6D2B00E51EBD /* PopularMoviesEndpoint.swift in Sources */,
 				8945B8D42BCD742C00E51EBD /* APIError.swift in Sources */,
 				8945B8592BCD4F2600E51EBD /* ShutterflyTaskApp.swift in Sources */,
@@ -404,6 +438,8 @@
 				8945B8BC2BCD6D2B00E51EBD /* NowPlayingMoviesEndpoint.swift in Sources */,
 				8945B8BD2BCD6D2B00E51EBD /* TopRatedMoviesEndpoint.swift in Sources */,
 				8945B8C82BCD6D3A00E51EBD /* NowPlayingTVShowsEndpoint.swift in Sources */,
+				8945B8DC2BCD750E00E51EBD /* DependencyValues+Extension.swift in Sources */,
+				8945B8E22BCD825700E51EBD /* NetworkService.swift in Sources */,
 				8945B8992BCD677300E51EBD /* EntertainmentContent.swift in Sources */,
 				8945B8C72BCD6D3A00E51EBD /* PopularTVShowsEndpoint.swift in Sources */,
 				8945B8D62BCD742C00E51EBD /* APIProviderError.swift in Sources */,

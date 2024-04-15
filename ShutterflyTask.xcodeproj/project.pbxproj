@@ -40,6 +40,9 @@
 		8945B8CC2BCD6D5200E51EBD /* ItemDetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8C92BCD6D5200E51EBD /* ItemDetailsEndpoint.swift */; };
 		8945B8CD2BCD6D5200E51EBD /* CastMembersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8CA2BCD6D5200E51EBD /* CastMembersEndpoint.swift */; };
 		8945B8CE2BCD6D5200E51EBD /* ReviewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8CB2BCD6D5200E51EBD /* ReviewsEndpoint.swift */; };
+		8945B8D42BCD742C00E51EBD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D12BCD742C00E51EBD /* APIError.swift */; };
+		8945B8D52BCD742C00E51EBD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */; };
+		8945B8D62BCD742C00E51EBD /* APIProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8D32BCD742C00E51EBD /* APIProviderError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		8945B8C92BCD6D5200E51EBD /* ItemDetailsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsEndpoint.swift; sourceTree = "<group>"; };
 		8945B8CA2BCD6D5200E51EBD /* CastMembersEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastMembersEndpoint.swift; sourceTree = "<group>"; };
 		8945B8CB2BCD6D5200E51EBD /* ReviewsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsEndpoint.swift; sourceTree = "<group>"; };
+		8945B8D12BCD742C00E51EBD /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		8945B8D32BCD742C00E51EBD /* APIProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +229,7 @@
 		8945B8AC2BCD6C1D00E51EBD /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
+				8945B8D02BCD741D00E51EBD /* Error */,
 				8945B8B12BCD6C3D00E51EBD /* Configuration */,
 				8945B8B42BCD6CED00E51EBD /* Implementation  */,
 			);
@@ -279,6 +286,16 @@
 				8945B8CB2BCD6D5200E51EBD /* ReviewsEndpoint.swift */,
 			);
 			path = ItemDetailsEndpoint;
+			sourceTree = "<group>";
+		};
+		8945B8D02BCD741D00E51EBD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8D12BCD742C00E51EBD /* APIError.swift */,
+				8945B8D32BCD742C00E51EBD /* APIProviderError.swift */,
+				8945B8D22BCD742C00E51EBD /* HTTPStatusCode.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,9 +384,11 @@
 				8945B8A82BCD6B9600E51EBD /* TVShowResponseDTO.swift in Sources */,
 				8945B85B2BCD4F2600E51EBD /* ContentView.swift in Sources */,
 				8945B8C02BCD6D2B00E51EBD /* PopularMoviesEndpoint.swift in Sources */,
+				8945B8D42BCD742C00E51EBD /* APIError.swift in Sources */,
 				8945B8592BCD4F2600E51EBD /* ShutterflyTaskApp.swift in Sources */,
 				8945B8C62BCD6D3A00E51EBD /* TrendingTVShowsEndpoint.swift in Sources */,
 				8945B8902BCD672F00E51EBD /* Review.swift in Sources */,
+				8945B8D52BCD742C00E51EBD /* HTTPStatusCode.swift in Sources */,
 				8945B8AB2BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift in Sources */,
 				8945B88E2BCD672B00E51EBD /* EntertainmentDetails.swift in Sources */,
 				8945B8A62BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift in Sources */,
@@ -387,6 +406,7 @@
 				8945B8C82BCD6D3A00E51EBD /* NowPlayingTVShowsEndpoint.swift in Sources */,
 				8945B8992BCD677300E51EBD /* EntertainmentContent.swift in Sources */,
 				8945B8C72BCD6D3A00E51EBD /* PopularTVShowsEndpoint.swift in Sources */,
+				8945B8D62BCD742C00E51EBD /* APIProviderError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

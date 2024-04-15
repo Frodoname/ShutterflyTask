@@ -1,0 +1,10 @@
+# swiftgen.yml
+# Generate Swift code for string resources
+strings:
+  inputs:
+    - ShutterflyTask/Application/Resource/Localizable.strings
+  outputs:
+    - templatePath: swiftgen/structured-swift5.stencil
+      output: ShutterflyTask/Application/Resource/Generated/Strings+Generated.swift
+      params:
+        enumName: Texts

@@ -6,4 +6,16 @@
   
 */
 
-"string" = "string";
+"home" = "Home";
+"movies" = "Movies";
+"tvShows" = "TV Shows";
+"favorite" = "Favorite";
+"moviesTVShows" = "Movies & TV Shows";
+"trendingMovies" = "Trending Movies";
+"popularMovies" = "Popular Movies";
+"trendingTVShows" = "Trending TV Shows";
+"popularTVShows" = "Popular TV Shows";
+"overView" = "Overview";
+"trailer" = "Trailer";
+"cast" = "Cast";
+"reviews" = "Reviews";

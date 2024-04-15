@@ -20,7 +20,7 @@ function mkdir_touch {
 mkdir_touch ShutterflyTask/Application/Resource/Generated/Strings+Generated.swift
 
 # initial generating texts
-swiftgen #config run --config SwiftGen/swiftgen.yml
+swiftgen config run --config swiftgen.yml
 
 # stop mesauring the script time 
 END_TIME=$(date +%s)

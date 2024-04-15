@@ -1,5 +1,5 @@
 //
-//  ItemDetailsDTO.swift
+//  EntertainmentDetailsDTO.swift
 //  ShutterflySketches
 //
 //  Created by Fed on 11.04.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ItemDetailsDTO: Decodable {
+struct EntertainmentDetailsDTO: Decodable {
     let adult: Bool
     let backdropPath: String?
     let belongsToCollection: BelongsToCollectionDTO?

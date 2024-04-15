@@ -16,7 +16,7 @@ struct EntertainmentDetails: Equatable {
     let trailerURL: URL?
     let isFavorite: Bool
     
-    init(model: ItemDetailsDTO) {
+    init(model: EntertainmentDetailsDTO) {
         self.itemID = model.id
         self.title = model.title
         self.image = ImageURLBuilder.url(forPath: model.backdropPath)
@@ -44,7 +44,7 @@ struct EntertainmentDetails: Equatable {
     }
 }
 
-extension ItemDetails {
+extension EntertainmentDetails {
     var toggleFavorite: Self {
         .init(
             itemID: itemID,

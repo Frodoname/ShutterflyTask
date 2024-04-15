@@ -7,17 +7,11 @@
 
 import Foundation
 
-struct ItemDetailsEndpoint: EndpointProtocol {
+struct EntertainmentDetailsEndpoint: EndpointProtocol {
     let movieID: Int
     let entertainmentType: Entertainment.EntertainmentType
 
     var path: String {
         "/3/\(entertainmentType.rawValue)/\(movieID)"
-    }
-}
-
-extension EndpointProtocol where Self == ItemDetailsEndpoint {
-    static func movieDetails(for movieID: Int, of type: Entertainment.EntertainmentType) -> Self {
-        .init(movieID: movieID, entertainmentType: type)
     }
 }

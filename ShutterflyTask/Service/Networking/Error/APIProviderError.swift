@@ -17,4 +17,5 @@ enum APIProviderError: Error {
     case timeoutError
     case noInternetConnection
     case unexpectedError(Error)
+    case dataConversionFailed
 }

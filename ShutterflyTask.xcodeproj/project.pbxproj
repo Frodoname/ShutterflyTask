@@ -52,6 +52,7 @@
 		8945B8EA2BCD86AC00E51EBD /* EntertainmentDetailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E72BCD86AC00E51EBD /* EntertainmentDetailsAPI.swift */; };
 		8945B8EB2BCD86AC00E51EBD /* TVShowsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E82BCD86AC00E51EBD /* TVShowsAPI.swift */; };
 		8945B8EC2BCD86AC00E51EBD /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8E92BCD86AC00E51EBD /* MoviesAPI.swift */; };
+		8945B8EE2BCD98D600E51EBD /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8ED2BCD98D600E51EBD /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		8945B8E72BCD86AC00E51EBD /* EntertainmentDetailsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailsAPI.swift; sourceTree = "<group>"; };
 		8945B8E82BCD86AC00E51EBD /* TVShowsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsAPI.swift; sourceTree = "<group>"; };
 		8945B8E92BCD86AC00E51EBD /* MoviesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
+		8945B8ED2BCD98D600E51EBD /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				8945B8DB2BCD750E00E51EBD /* DependencyValues+Extension.swift */,
+				8945B8ED2BCD98D600E51EBD /* Array+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				8945B8BD2BCD6D2B00E51EBD /* TopRatedMoviesEndpoint.swift in Sources */,
 				8945B8EC2BCD86AC00E51EBD /* MoviesAPI.swift in Sources */,
 				8945B8C82BCD6D3A00E51EBD /* NowPlayingTVShowsEndpoint.swift in Sources */,
+				8945B8EE2BCD98D600E51EBD /* Array+Extension.swift in Sources */,
 				8945B8DC2BCD750E00E51EBD /* DependencyValues+Extension.swift in Sources */,
 				8945B8E22BCD825700E51EBD /* NetworkService.swift in Sources */,
 				8945B8992BCD677300E51EBD /* EntertainmentContent.swift in Sources */,

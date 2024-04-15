@@ -15,3 +15,15 @@ protocol EntertainmentContent: Identifiable, Equatable {
     var entertainment: Entertainment { get }
     init(id: UUID, itemID: Int, title: String, image: URL?, entertainment: Entertainment)
 }
+
+extension EntertainmentContent {
+    func setListType(_ listType: Entertainment.ListType) -> Self {
+        Self(
+            id: id,
+            itemID: itemID,
+            title: title,
+            image: image,
+            entertainment: .init(type: entertainment.type, listType: listType)
+        )
+    }
+}

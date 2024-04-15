@@ -12,8 +12,8 @@
 		8945B85D2BCD4F2800E51EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945B85C2BCD4F2800E51EBD /* Assets.xcassets */; };
 		8945B8602BCD4F2800E51EBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945B85F2BCD4F2800E51EBD /* Preview Assets.xcassets */; };
 		8945B8682BCD4F4900E51EBD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8945B8672BCD4F4900E51EBD /* ComposableArchitecture */; };
-		8945B86D2BCD53DB00E51EBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8945B86B2BCD53DB00E51EBD /* Localizable.strings */; };
-		8945B8752BCD564F00E51EBD /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B8732BCD564F00E51EBD /* Strings+Generated.swift */; };
+		8945B87A2BCD5EDA00E51EBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8945B8782BCD5EDA00E51EBD /* Localizable.strings */; };
+		8945B87C2BCD606600E51EBD /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B87B2BCD606600E51EBD /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		8945B85A2BCD4F2600E51EBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8945B85C2BCD4F2800E51EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8945B85F2BCD4F2800E51EBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8945B86C2BCD53DB00E51EBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8945B8732BCD564F00E51EBD /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		8945B8792BCD5EDA00E51EBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8945B87B2BCD606600E51EBD /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,6 @@
 				8945B8692BCD53BF00E51EBD /* Application */,
 				8945B8582BCD4F2600E51EBD /* ShutterflyTaskApp.swift */,
 				8945B85A2BCD4F2600E51EBD /* ContentView.swift */,
-				8945B85C2BCD4F2800E51EBD /* Assets.xcassets */,
 				8945B85E2BCD4F2800E51EBD /* Preview Content */,
 			);
 			path = ShutterflyTask;
@@ -85,8 +84,9 @@
 		8945B86A2BCD53CB00E51EBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8945B85C2BCD4F2800E51EBD /* Assets.xcassets */,
 				8945B8742BCD564F00E51EBD /* Generated */,
-				8945B86B2BCD53DB00E51EBD /* Localizable.strings */,
+				8945B8782BCD5EDA00E51EBD /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 		8945B8742BCD564F00E51EBD /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				8945B8732BCD564F00E51EBD /* Strings+Generated.swift */,
+				8945B87B2BCD606600E51EBD /* Strings+Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8945B8602BCD4F2800E51EBD /* Preview Assets.xcassets in Resources */,
-				8945B86D2BCD53DB00E51EBD /* Localizable.strings in Resources */,
+				8945B87A2BCD5EDA00E51EBD /* Localizable.strings in Resources */,
 				8945B85D2BCD4F2800E51EBD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,17 +178,17 @@
 			files = (
 				8945B85B2BCD4F2600E51EBD /* ContentView.swift in Sources */,
 				8945B8592BCD4F2600E51EBD /* ShutterflyTaskApp.swift in Sources */,
-				8945B8752BCD564F00E51EBD /* Strings+Generated.swift in Sources */,
+				8945B87C2BCD606600E51EBD /* Strings+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8945B86B2BCD53DB00E51EBD /* Localizable.strings */ = {
+		8945B8782BCD5EDA00E51EBD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8945B86C2BCD53DB00E51EBD /* en */,
+				8945B8792BCD5EDA00E51EBD /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

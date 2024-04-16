@@ -13,24 +13,30 @@ struct MoviesView: View {
 
     var body: some View {
         NavigationStackStore(store.scope(state: \.path, action: \.path)) {
-            MoviesGridView(movies: store.movies)
-                .navigationTitle(Texts.movies)
-                .toolbar {
-                    Menu(Texts.sort) {
-                        Button(Texts.topRated) {
-                            store.send(.sortMovies(.topRated))
+            Group {
+                if store.isLoading {
+                    ProgressView()
+                } else {
+                    MoviesGridView(movies: store.movies)
+                        .navigationTitle(Texts.movies)
+                        .toolbar {
+                            Menu(Texts.sort) {
+                                Button(Texts.topRated) {
+                                    store.send(.sortMovies(.topRated))
+                                }
+                                Button(Texts.nowPlaying) {
+                                    store.send(.sortMovies(.nowPlaying))
+                                }
+                                Button(Texts.popular) {
+                                    store.send(.sortMovies(.popular))
+                                }
+                            }
                         }
-                        Button(Texts.nowPlaying) {
-                            store.send(.sortMovies(.nowPlaying))
-                        }
-                        Button(Texts.popular) {
-                            store.send(.sortMovies(.popular))
-                        }
-                    }
                 }
-                .onAppear {
-                    store.send(.fetchAllMovies)
-                }
+            }
+            .onAppear {
+                store.send(.fetchAllMovies)
+            }
         } destination: { store in
             DetailsView(store: store)
         }

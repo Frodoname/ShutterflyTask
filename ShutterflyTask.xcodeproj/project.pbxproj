@@ -163,7 +163,7 @@
 		8945B93C2BCEC36900E51EBD /* TrailerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerEndpoint.swift; sourceTree = "<group>"; };
 		8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingTVShowsResponseDTO.swift; sourceTree = "<group>"; };
 		8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseConfig.xcconfig; sourceTree = "<group>"; };
-		8945B9412BCEE40600E51EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8945B9412BCEE40600E51EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8945B9422BCEE44E00E51EBD /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		8945B9472BCEE5DE00E51EBD /* VideoURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLBuilder.swift; sourceTree = "<group>"; };
 		8945B9492BCEE5EB00E51EBD /* ImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLBuilder.swift; sourceTree = "<group>"; };
@@ -201,13 +201,12 @@
 		8945B8572BCD4F2600E51EBD /* ShutterflyTask */ = {
 			isa = PBXGroup;
 			children = (
-				8945B9412BCEE40600E51EBD /* Info.plist */,
+				8945B8692BCD53BF00E51EBD /* Application */,
 				8945B9002BCD9AC400E51EBD /* Helper */,
 				8945B8DA2BCD74FD00E51EBD /* Extension */,
 				8945B89C2BCD6B4F00E51EBD /* Service */,
 				8945B8972BCD676E00E51EBD /* Protocol */,
 				8945B8852BCD66E400E51EBD /* Model */,
-				8945B8692BCD53BF00E51EBD /* Application */,
 				8945B8832BCD669400E51EBD /* UI */,
 			);
 			path = ShutterflyTask;
@@ -225,6 +224,7 @@
 		8945B86A2BCD53CB00E51EBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8945B9412BCEE40600E51EBD /* Info.plist */,
 				8945B9422BCEE44E00E51EBD /* Enviroment.swift */,
 				8945B85C2BCD4F2800E51EBD /* Assets.xcassets */,
 				8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */,
@@ -868,7 +868,7 @@
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShutterflyTask/Info.plist;
+				INFOPLIST_FILE = ShutterflyTask/Application/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -897,7 +897,7 @@
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShutterflyTask/Info.plist;
+				INFOPLIST_FILE = ShutterflyTask/Application/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -10,27 +10,33 @@ import SwiftUI
 
 struct TVShowsView: View {
     let store: StoreOf<TVShowsCore>
-
+    
     var body: some View {
         NavigationStackStore(store.scope(state: \.path, action: \.path)) {
-            MoviesGridView(movies: store.tvShows)
-                .navigationTitle(Texts.tvShows)
-                .toolbar {
-                    Menu(Texts.sort) {
-                        Button(Texts.topRated) {
-                            store.send(.sortTVShows(.topRated))
+            Group {
+                if store.isLoading {
+                    ProgressView()
+                } else {
+                    MoviesGridView(movies: store.tvShows)
+                        .navigationTitle(Texts.tvShows)
+                        .toolbar {
+                            Menu(Texts.sort) {
+                                Button(Texts.topRated) {
+                                    store.send(.sortTVShows(.topRated))
+                                }
+                                Button(Texts.nowPlaying) {
+                                    store.send(.sortTVShows(.nowPlaying))
+                                }
+                                Button(Texts.popular) {
+                                    store.send(.sortTVShows(.popular))
+                                }
+                            }
                         }
-                        Button(Texts.nowPlaying) {
-                            store.send(.sortTVShows(.nowPlaying))
-                        }
-                        Button(Texts.popular) {
-                            store.send(.sortTVShows(.popular))
-                        }
-                    }
                 }
-                .onAppear {
-                    store.send(.fetchAllTVShows)
-                }
+            }
+            .onAppear {
+                store.send(.fetchAllTVShows)
+            }
         } destination: { store in
             DetailsView(store: store)
         }

@@ -28,14 +28,11 @@ struct FavoriteCell: View {
                     .font(.headline)
                     .foregroundColor(.primary)
                 Text(details.mainDetails.overview)
+                    .lineLimit(3)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
             .padding(.leading, 10)
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(12)
-        .shadow(radius: 2)
     }
 }

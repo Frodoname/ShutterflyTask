@@ -81,6 +81,7 @@
 		8945B9392BCEC0B200E51EBD /* YoutubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B9382BCEC0B200E51EBD /* YoutubeView.swift */; };
 		8945B93B2BCEC30B00E51EBD /* TrailerResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93A2BCEC30B00E51EBD /* TrailerResponseDTO.swift */; };
 		8945B93D2BCEC36900E51EBD /* TrailerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93C2BCEC36900E51EBD /* TrailerEndpoint.swift */; };
+		8945B93F2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		8945B9382BCEC0B200E51EBD /* YoutubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeView.swift; sourceTree = "<group>"; };
 		8945B93A2BCEC30B00E51EBD /* TrailerResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerResponseDTO.swift; sourceTree = "<group>"; };
 		8945B93C2BCEC36900E51EBD /* TrailerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerEndpoint.swift; sourceTree = "<group>"; };
+		8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingTVShowsResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 				8945B8A02BCD6B9600E51EBD /* MovieReviewsResponseDTO.swift */,
 				8945B8A52BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift */,
 				8945B8A22BCD6B9600E51EBD /* TVShowResponseDTO.swift */,
+				8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */,
 				8945B93A2BCEC30B00E51EBD /* TrailerResponseDTO.swift */,
 			);
 			path = Decodable;
@@ -622,6 +625,7 @@
 				8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */,
 				8945B9182BCD9C0600E51EBD /* DetailsView.swift in Sources */,
 				8945B9322BCE8DF500E51EBD /* EntertainmentDetailsCache.swift in Sources */,
+				8945B93F2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift in Sources */,
 				8945B9152BCD9BEC00E51EBD /* FavoriteCore.swift in Sources */,
 				8945B9092BCD9BA600E51EBD /* TVShowsView.swift in Sources */,
 				8945B8E42BCD84EC00E51EBD /* URLBuilder.swift in Sources */,

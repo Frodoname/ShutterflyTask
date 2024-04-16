@@ -35,7 +35,7 @@ struct DetailsView: View {
                             }
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200)
+//                            .frame(width: 200, height: 200)
                         HStack {
                             Text(String(format: "%.1f", details.mainDetails.rating))
                                 .fontWeight(.semibold)
@@ -74,10 +74,8 @@ struct DetailsView: View {
                                 }
                             }
                         }
-                        
                         Text(Texts.reviews)
                             .font(.headline)
-                        
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(details.reviews) { review in

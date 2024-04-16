@@ -12,15 +12,6 @@ struct TrailerResponseDTO: Decodable {
     let results: [TrailerDTO]
     
     struct TrailerDTO: Decodable {
-//        let iso6391: String
-//        let iso31661: String
-//        let name: String
         let key: String
-//        let site: String
-//        let size: Int
-//        let type: String
-//        let official: Bool
-//        let publishedAt: String
-//        let id: String
     }
 }

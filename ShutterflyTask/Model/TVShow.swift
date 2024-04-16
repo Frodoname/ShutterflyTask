@@ -22,6 +22,14 @@ struct TVShow {
         self.entertainment = .init(type: .tvShow)
     }
     
+    init(model: NowPlayingTVShowsResponseDTO.NowPlayingTVShowDTO) {
+        self.id = .init()
+        self.itemID = model.id
+        self.title = model.originalTitle
+        self.image = ImageURLBuilder.buildURL(forPath: model.backdropPath)
+        self.entertainment = .init(type: .tvShow)
+    }
+    
     init(id: UUID, itemID: Int, title: String, image: URL?, entertainment: Entertainment) {
         self.id = id
         self.itemID = itemID
@@ -35,6 +43,14 @@ extension TVShow: EntertainmentContent { }
 
 extension Array where Element == TVShow {
     init(dtoModel: TVShowResponseDTO) {
+        self.init()
+        for dto in dtoModel.results {
+            let movie = TVShow(model: dto)
+            self.append(movie)
+        }
+    }
+    
+    init(dtoModel: NowPlayingTVShowsResponseDTO) {
         self.init()
         for dto in dtoModel.results {
             let movie = TVShow(model: dto)

@@ -12,16 +12,18 @@ struct MoviesGridView<T: EntertainmentContent>: View {
     let movies: IdentifiedArray<UUID, T>
 
     private let columns: [GridItem] = [
-        .init(),
-        .init()
+        GridItem(.fixed(175), spacing: 5),
+        GridItem(.fixed(175), spacing: 5)
     ]
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns) {
+            LazyVGrid(columns: columns, spacing: 0) {
                 ForEach(movies) { movie in
                     NavigationLink(state: DetailsCore.State(itemID: movie.itemID, contentType: movie.entertainment.type)) {
                         MovieCell(movie: movie)
+                            .frame(height: 130)
+                            .cornerRadius(8)
                     }
                 }
             }

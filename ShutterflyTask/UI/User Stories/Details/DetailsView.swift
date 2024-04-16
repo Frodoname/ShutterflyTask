@@ -35,7 +35,6 @@ struct DetailsView: View {
                             }
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-//                            .frame(width: 200, height: 200)
                         HStack {
                             Text(String(format: "%.1f", details.mainDetails.rating))
                                 .fontWeight(.semibold)
@@ -76,21 +75,27 @@ struct DetailsView: View {
                         }
                         Text(Texts.reviews)
                             .font(.headline)
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(details.reviews) { review in
-                                    VStack(alignment: .leading) {
-                                        Text(review.author)
-                                            .fontWeight(.bold)
-                                        Text(review.content)
-                                            .lineLimit(4)
+                        if details.reviews.isEmpty {
+                            Text(Texts.noReviews)
+                                .foregroundColor(.gray)
+                        } else {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach(details.reviews) { review in
+                                        VStack(alignment: .leading) {
+                                            Text(review.author)
+                                                .fontWeight(.bold)
+                                            Text(review.content)
+                                                .lineLimit(4)
+                                        }
+                                        .frame(width: 250)
+                                        .padding()
+                                        .background(Color.secondary.opacity(0.1))
+                                        .cornerRadius(8)
                                     }
-                                    .frame(width: 250)
-                                    .padding()
-                                    .background(Color.secondary.opacity(0.1))
-                                    .cornerRadius(8)
                                 }
                             }
+
                         }
                     }
                     .padding()

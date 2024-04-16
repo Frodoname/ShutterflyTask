@@ -22,8 +22,8 @@ struct MoviesCategoryRow<T: EntertainmentContent>: View {
                     ForEach(movies) { movie in
                         NavigationLink(state: DetailsCore.State(itemID: movie.itemID, contentType: movie.entertainment.type)) {
                             MovieCell(movie: movie)
+                                .frame(width: 300, height: 150)
                                 .cornerRadius(8)
-                                .padding()
                         }
                         .buttonStyle(.borderless)
 

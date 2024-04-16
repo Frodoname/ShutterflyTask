@@ -15,9 +15,3 @@ struct ReviewsEndpoint: EndpointProtocol {
         "/3/\(entertainmentType.rawValue)/\(id)/reviews"
     }
 }
-
-extension EndpointProtocol where Self == ReviewsEndpoint {
-    static func reviews(for id: Int, of type: Entertainment.EntertainmentType) -> Self {
-        .init(id: id, entertainmentType: type)
-    }
-}

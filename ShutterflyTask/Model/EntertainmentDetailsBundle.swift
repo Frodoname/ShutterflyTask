@@ -9,13 +9,32 @@ import Foundation
 
 struct EntertainmentDetailsBundle: Equatable {
     let mainDetails: EntertainmentDetails
+    let trailerURL: URL?
     let cast: [CastMember]
     let reviews: [Review]
+    
+    init(mainDetails: EntertainmentDetails, trailerKey: String?, cast: [CastMember], reviews: [Review]) {
+        self.mainDetails = mainDetails
+        self.trailerURL = VideoURLBuilder.buildURL(forPath: trailerKey)
+        self.cast = cast
+        self.reviews = reviews
+    }
+    
+    private init(mainDetails: EntertainmentDetails, trailerURL: URL?, cast: [CastMember], reviews: [Review]) {
+        self.mainDetails = mainDetails
+        self.trailerURL = trailerURL
+        self.cast = cast
+        self.reviews = reviews
+    }
 }
 
 extension EntertainmentDetailsBundle {
     var toggleFavorite: Self {
-        let mainDetails = mainDetails.toggleFavorite
-        return .init(mainDetails: mainDetails, cast: cast, reviews: reviews)
+        .init(
+            mainDetails: mainDetails.toggleFavorite,
+            trailerURL: trailerURL,
+            cast: cast,
+            reviews: reviews
+        )
     }
 }

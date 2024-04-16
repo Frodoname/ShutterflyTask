@@ -17,7 +17,7 @@ struct CastMember {
         self.id = .init()
         self.name = model.originalName
         self.characterName = model.character
-        self.image = ImageURLBuilder.url(forPath: model.profilePath)
+        self.image = ImageURLBuilder.buildURL(forPath: model.profilePath)
     }
 }
 

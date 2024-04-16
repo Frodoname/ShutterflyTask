@@ -21,7 +21,7 @@ struct EntertainmentDetails {
         self.id = .init()
         self.itemID = model.id
         self.title = model.title
-        self.image = ImageURLBuilder.url(forPath: model.backdropPath)
+        self.image = ImageURLBuilder.buildURL(forPath: model.backdropPath)
         self.rating = model.voteAverage
         self.overview = model.overview
         self.trailerURL = nil
@@ -32,7 +32,7 @@ struct EntertainmentDetails {
         self.id = .init()
         self.itemID = model.id
         self.title = model.name
-        self.image = ImageURLBuilder.url(forPath: model.backdropPath)
+        self.image = ImageURLBuilder.buildURL(forPath: model.backdropPath)
         self.rating = model.voteAverage
         self.overview = model.overview
         self.trailerURL = nil

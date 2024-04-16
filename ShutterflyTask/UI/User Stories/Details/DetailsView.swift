@@ -18,19 +18,17 @@ struct DetailsView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
                         HStack {
-                             Text(details.mainDetails.title)
-                                 .font(.largeTitle)
-                                 .fontWeight(.bold)
-                             
-                             Spacer()
-                             
+                            Text(details.mainDetails.title)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            Spacer()
                             Button {
                                 store.send(.toggleFavorite)
                             } label: {
-                                 Image(systemName: details.mainDetails.isFavorite ? "heart.fill" : "heart")
-                                     .foregroundColor(details.mainDetails.isFavorite ? .red : .gray)
-                             }
-                         }
+                                Image(systemName: details.mainDetails.isFavorite ? "heart.fill" : "heart")
+                                    .foregroundColor(details.mainDetails.isFavorite ? .red : .gray)
+                            }
+                        }
                         KFImage(details.mainDetails.image)
                             .placeholder { _ in
                                 ProgressView()
@@ -38,47 +36,35 @@ struct DetailsView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 200, height: 200)
-                        
                         HStack {
                             Text(String(format: "%.1f", details.mainDetails.rating))
                                 .fontWeight(.semibold)
                             Image(systemName: "star.fill")
                                 .foregroundColor(.yellow)
                         }
-                        
                         Text(Texts.overView)
                             .font(.headline)
-                        
                         Text(details.mainDetails.overview)
-                        
-                        Text(Texts.trailer)
-                            .font(.headline)
-                        
-                        // Placeholder for the trailer player
-                        Rectangle()
-                            .frame(height: 200)
-                            .foregroundColor(.gray)
-                            .overlay(
-                                Text("Trailer Player Placeholder")
-                                    .foregroundColor(.white)
-                            )
-                        
+                        if let trailerURL = details.trailerURL {
+                            Text(Texts.trailer)
+                                .font(.headline)
+                            YoutubeView(url: trailerURL)
+                                .frame(height: 200)
+                        }
                         Text(Texts.cast)
                             .font(.headline)
-                        
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(details.cast) { castMember in
                                     VStack {
-                                        AsyncImage(url: castMember.image) { image in
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 100, height: 100)
-                                                .clipShape(Circle())
-                                        } placeholder: {
-                                            ProgressView()
-                                        }
+                                        KFImage(castMember.image)
+                                            .placeholder { _ in
+                                                ProgressView()
+                                            }
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 100, height: 100)
+                                            .clipShape(Circle())
                                         Text(castMember.name)
                                             .font(.caption)
                                         Text(castMember.characterName)

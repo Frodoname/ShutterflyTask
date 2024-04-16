@@ -29,10 +29,10 @@ extension TVShowsAPI: DependencyKey {
         }
         
         return Self(
-            trendingTVShows: { try await fetchTVShows(endpoint: .trendingTVShows) },
-            popularTVShows: { page in try await fetchTVShows(endpoint: .popularTVShows(for: page)) },
-            topRatedTVShows: { page in try await fetchTVShows(endpoint: .topRatedTVShows(for: page)) },
-            nowPlayingTVShows: { page in try await fetchTVShows(endpoint: .nowPlayingTVShows(for: page)) }
+            trendingTVShows: { try await fetchTVShows(endpoint: TrendingTVShowsEndpoint()) },
+            popularTVShows: { try await fetchTVShows(endpoint: PopularTVShowsEndpoint(page: $0)) },
+            topRatedTVShows: { try await fetchTVShows(endpoint: TopRatedTVShowsEndpoint(page: $0)) },
+            nowPlayingTVShows: { try await fetchTVShows(endpoint: NowPlayingMoviesEndpoint(page: $0)) }
         )
     }
 }

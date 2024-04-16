@@ -12,6 +12,7 @@ struct EntertainmentDetailsAPI {
     var getDetails: (_ id: Int, _ type: Entertainment.EntertainmentType) async throws -> EntertainmentDetails
     var getCastMembers: (_ id: Int, _ type: Entertainment.EntertainmentType) async throws -> [CastMember]
     var getReviews: (_ id: Int, _ type: Entertainment.EntertainmentType) async throws -> [Review]
+    var getTrailerKey: (_ id: Int, _ type: Entertainment.EntertainmentType) async throws -> String?
 }
 
 extension EntertainmentDetailsAPI: DependencyKey {
@@ -55,6 +56,14 @@ extension EntertainmentDetailsAPI: DependencyKey {
                     throw APIProviderError.dataConversionFailed
                 }
                 return [Review](dtoModel: dtoModel)
+            },
+            getTrailerKey: { id, type in
+                let endpoint = TrailerEndpoint(id: id, entertainmentType: type)
+                guard let dtoModel = try await networkService
+                    .performRequest(endpoint, TrailerResponseDTO.self) as? TrailerResponseDTO else {
+                    throw APIProviderError.dataConversionFailed
+                }
+                return dtoModel.results.first?.key
             }
         )
     }

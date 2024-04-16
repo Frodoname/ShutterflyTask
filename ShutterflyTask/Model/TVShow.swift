@@ -18,7 +18,7 @@ struct TVShow {
         self.id = .init()
         self.itemID = model.id
         self.title = model.name
-        self.image = ImageURLBuilder.url(forPath: model.backdropPath)
+        self.image = ImageURLBuilder.buildURL(forPath: model.backdropPath)
         self.entertainment = .init(type: .tvShow)
     }
     

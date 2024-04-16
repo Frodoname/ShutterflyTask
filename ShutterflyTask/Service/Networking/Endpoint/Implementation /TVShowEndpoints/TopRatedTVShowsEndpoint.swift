@@ -17,9 +17,3 @@ struct TopRatedTVShowsEndpoint: EndpointProtocol {
         ]
     }
 }
-
-extension EndpointProtocol where Self == TopRatedTVShowsEndpoint {
-    static func topRatedTVShows(for page: Int) -> Self {
-        .init(page: page)
-    }
-}

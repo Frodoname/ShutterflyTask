@@ -33,9 +33,15 @@ extension EntertainmentDetailsRepository: DependencyKey {
                 async let mainDetails = entertainmentDetailsAPI.getDetails(id, type)
                 async let cast = entertainmentDetailsAPI.getCastMembers(id, type)
                 async let reviews = entertainmentDetailsAPI.getReviews(id, type)
+                async let trailer = entertainmentDetailsAPI.getTrailerKey(id, type)
                 
                 do {
-                    let results = try await EntertainmentDetailsBundle(mainDetails: mainDetails, cast: cast, reviews: reviews)
+                    let results = try await EntertainmentDetailsBundle(
+                        mainDetails: mainDetails,
+                        trailerKey: trailer,
+                        cast: cast,
+                        reviews: reviews
+                    )
                     EntertainmentDetailsCache.shared.set(results)
                     return .success(results)
                 } catch {

@@ -13,7 +13,22 @@ struct TabsView: View {
     
     var body: some View {
         TabView {
-
+            HomeView(store: store.scope(state: \.home, action: \.home))
+                .tabItem {
+                    Label(Texts.home, systemImage: "house")
+                }
+            MoviesView(store: store.scope(state: \.movies, action: \.movies))
+                .tabItem {
+                    Label(Texts.movies, systemImage: "popcorn")
+                }
+            TVShowsView(store: store.scope(state: \.tvShows, action: \.tvShows))
+                .tabItem {
+                    Label(Texts.tvShows, systemImage: "tv")
+                }
+            FavouritesView()
+                .tabItem {
+                    Label(Texts.favorite, systemImage: "star.fill")
+                }
         }
     }
 }

@@ -16,7 +16,7 @@ struct EntertainmentDetails: Equatable {
     let trailerURL: URL?
     let isFavorite: Bool
     
-    init(model: EntertainmentDetailsDTO) {
+    init(model: MovieDetailsDTO) {
         self.itemID = model.id
         self.title = model.title
         self.image = ImageURLBuilder.url(forPath: model.backdropPath)
@@ -25,6 +25,17 @@ struct EntertainmentDetails: Equatable {
         self.trailerURL = nil
         self.isFavorite = false
     }
+    
+    init(model: TVShowDetailsDTO) {
+        self.itemID = model.id
+        self.title = model.name
+        self.image = ImageURLBuilder.url(forPath: model.backdropPath)
+        self.rating = model.voteAverage
+        self.overview = model.overview
+        self.trailerURL = nil
+        self.isFavorite = false
+    }
+    
     init(
         itemID: Int,
         title: String,

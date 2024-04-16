@@ -21,7 +21,6 @@ struct ItemCastResponseDTO: Decodable {
         let originalName: String
         let popularity: Double
         let profilePath: String?
-        let castId: Int
         let character: String
         let creditId: String
         let order: Int

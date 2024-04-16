@@ -20,7 +20,7 @@ struct MoviesCategoryRow<T: EntertainmentContent>: View {
             ScrollView(.horizontal) {
                 LazyHStack {
                     ForEach(movies) { movie in
-                        NavigationLink(state: DetailsFeature.State(itemID: movie.itemID, contentType: movie.entertainment.type)) {
+                        NavigationLink(state: DetailsCore.State(itemID: movie.itemID, contentType: movie.entertainment.type)) {
                             MovieCell(movie: movie)
                                 .cornerRadius(8)
                                 .padding()

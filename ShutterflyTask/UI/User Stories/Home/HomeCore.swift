@@ -12,7 +12,7 @@ import Foundation
 struct HomeCore {
     @ObservableState
     struct State: Equatable {
-        var path = StackState<DetailsFeature.State>()
+        var path = StackState<DetailsCore.State>()
         var searchText = ""
         var trendingMovies: IdentifiedArrayOf<Movie> = []
         var popularMovies: IdentifiedArrayOf<Movie> = []
@@ -29,7 +29,7 @@ struct HomeCore {
         case dataResponse(Result<EntertainmentBundle, Error>)
         case searchResponse(Result<[Movie], Error>)
         case setSearchResult(String)
-        case path(StackAction<DetailsFeature.State, DetailsFeature.Action>)
+        case path(StackAction<DetailsCore.State, DetailsCore.Action>)
     }
     
     enum CancelID {
@@ -85,7 +85,7 @@ struct HomeCore {
             }
         }
         .forEach(\.path, action: \.path) {
-            DetailsFeature()
+            DetailsCore()
         }
     }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 struct Entertainment: Equatable {
     enum EntertainmentType: String {
-        case movie
-        case tvShow
+        case movie = "movie"
+        case tvShow = "tv"
     }
 
     enum ListType {

@@ -12,12 +12,14 @@ struct TVShowsView: View {
     let store: StoreOf<TVShowsCore>
 
     var body: some View {
-        NavigationStack {
+        NavigationStackStore(store.scope(state: \.path, action: \.path)) {
             MoviesGridView(movies: store.tvShows)
                 .navigationTitle(Texts.tvShows)
                 .onAppear {
                     store.send(.fetchAllTVShows)
                 }
+        } destination: { store in
+            DetailsView(store: store)
         }
     }
 }

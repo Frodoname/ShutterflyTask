@@ -8,7 +8,7 @@
 import ComposableArchitecture
 
 @Reducer
-struct DetailsFeature {
+struct DetailsCore {
     @ObservableState
     struct State: Equatable {
         var itemID: Int
@@ -49,6 +49,7 @@ struct DetailsFeature {
                 return .none
             case .toggleFavorite:
                 return .run { send in
+                    
                     await send(.delegate(.toggleFavorite))
                 }
             case .delegate:

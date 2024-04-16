@@ -20,7 +20,9 @@ struct MoviesGridView<T: EntertainmentContent>: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(movies) { movie in
-                    MovieCell(movie: movie)
+                    NavigationLink(state: DetailsCore.State(itemID: movie.itemID, contentType: movie.entertainment.type)) {
+                        MovieCell(movie: movie)
+                    }
                 }
             }
             .padding()

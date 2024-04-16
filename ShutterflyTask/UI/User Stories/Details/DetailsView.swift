@@ -6,10 +6,11 @@
 //
 
 import ComposableArchitecture
+import Kingfisher
 import SwiftUI
 
 struct DetailsView: View {
-    @Bindable var store: StoreOf<DetailsFeature>
+    @Bindable var store: StoreOf<DetailsCore>
     
     var body: some View {
         Group {
@@ -30,12 +31,13 @@ struct DetailsView: View {
                                      .foregroundColor(details.mainDetails.isFavorite ? .red : .gray)
                              }
                          }
-                        AsyncImage(url: details.mainDetails.image) { image in
-                            image.resizable()
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .frame(width: 200, height: 300)
+                        KFImage(details.mainDetails.image)
+                            .placeholder { _ in
+                                ProgressView()
+                            }
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 200)
                         
                         HStack {
                             Text(String(format: "%.1f", details.mainDetails.rating))

@@ -20,18 +20,23 @@ extension EntertainmentDetailsAPI: DependencyKey {
         
         return Self(
             getDetails: { id, type in
-                do {
-                    let endpoint = EntertainmentDetailsEndpoint(movieID: id, entertainmentType: type)
+                let endpoint = EntertainmentDetailsEndpoint(movieID: id, entertainmentType: type)
+                switch type {
+                case .movie:
                     guard
                         let dtoModel = try await networkService
-                            .performRequest(endpoint, EntertainmentDetailsDTO.self) as? EntertainmentDetailsDTO else {
+                            .performRequest(endpoint, MovieDetailsDTO.self) as? MovieDetailsDTO else {
                         throw APIProviderError.dataConversionFailed
                     }
                     return EntertainmentDetails(model: dtoModel)
-                } catch {
-                    throw error
+                case .tvShow:
+                    guard
+                        let dtoModel = try await networkService
+                            .performRequest(endpoint, TVShowDetailsDTO.self) as? TVShowDetailsDTO else {
+                        throw APIProviderError.dataConversionFailed
+                    }
+                    return EntertainmentDetails(model: dtoModel)
                 }
-
             },
             getCastMembers: { id, type in
                 let endpoint = CastMembersEndpoint(id: id, entertainmentType: type)

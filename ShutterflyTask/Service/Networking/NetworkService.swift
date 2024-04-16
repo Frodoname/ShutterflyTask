@@ -20,22 +20,18 @@ extension NetworkService: DependencyKey {
         
         return Self { endpoint, responseModel in
             let request = try requestBuilder.buildRequest(endpoint)
+            let (data, response) = try await taskExecutor.executeDataTask(request)
             
-            do {
-                let (data, response) = try await taskExecutor.executeDataTask(request)
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    throw APIProviderError.invalidResponse
-                }
-                
-                if let apiError = APIError(data: data, response: httpResponse) {
-                    throw APIProviderError.serverError(apiError)
-                }
-                
-                let decodedData = try decoder.decode(data, responseModel)
-                return decodedData
-            } catch {
-                throw APIProviderError.unexpectedError(error)
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw APIProviderError.invalidResponse
             }
+            
+            if let apiError = APIError(data: data, response: httpResponse) {
+                throw APIProviderError.serverError(apiError)
+            }
+            
+            let decodedData = try decoder.decode(data, responseModel)
+            return decodedData
         }
     }
 }

@@ -11,6 +11,7 @@ import ComposableArchitecture
 struct TVShowsCore {
     @ObservableState
     struct State: Equatable {
+        var path = StackState<DetailsCore.State>()
         var tvShows: IdentifiedArrayOf<TVShow> = []
         var pagination = PaginationData()
         var isLoading = false
@@ -19,6 +20,7 @@ struct TVShowsCore {
     enum Action {
         case fetchAllTVShows
         case tvShowsResponse(Result<[TVShow], Error>)
+        case path(StackAction<DetailsCore.State, DetailsCore.Action>)
     }
     
     @Dependency(\.tvShowsRepository) private var tvShowsRepository
@@ -39,7 +41,12 @@ struct TVShowsCore {
             case let .tvShowsResponse(.failure(error)):
                 debugPrint(error)
                 return .none
+            case .path:
+                return .none
             }
+        }
+        .forEach(\.path, action: \.path) {
+            DetailsCore()
         }
     }
 }

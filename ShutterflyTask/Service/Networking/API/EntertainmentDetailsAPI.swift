@@ -54,3 +54,10 @@ extension EntertainmentDetailsAPI: DependencyKey {
         )
     }
 }
+
+extension DependencyValues {
+    var entertainmentDetailsAPI: EntertainmentDetailsAPI {
+        get { self[EntertainmentDetailsAPI.self] }
+        set { self[EntertainmentDetailsAPI.self] = newValue }
+    }
+}

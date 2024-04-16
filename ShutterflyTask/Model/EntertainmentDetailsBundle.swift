@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EntertainmentDetailsBundle: Equatable {
+struct EntertainmentDetailsBundle {
     let mainDetails: EntertainmentDetails
     let trailerURL: URL?
     let cast: [CastMember]
@@ -27,6 +27,8 @@ struct EntertainmentDetailsBundle: Equatable {
         self.reviews = reviews
     }
 }
+
+extension EntertainmentDetailsBundle: Equatable { }
 
 extension EntertainmentDetailsBundle {
     var toggleFavorite: Self {

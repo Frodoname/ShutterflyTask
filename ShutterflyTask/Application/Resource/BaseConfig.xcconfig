@@ -1,0 +1,12 @@
+//
+//  BaseConfig.xcconfig
+//  ShutterflyTask
+//
+//  Created by Fed on 16.04.2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = api.themoviedb.org
+API_TOKEN = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ODIyNzU5NDMzZDI2YjAzMzNjMWMyNmU5NDNhYzI2ZiIsInN1YiI6IjYyOTYwMWJhMWU5MjI1MDA5Y2RiMjVjZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fwaPeeIoWgLaOne9RijPxFgJ3lGKe75zdfx-XmnH0A4

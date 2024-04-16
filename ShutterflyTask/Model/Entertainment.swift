@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Entertainment: Equatable {
+struct Entertainment {
     enum EntertainmentType: String {
         case movie = "movie"
         case tvShow = "tv"
@@ -30,6 +30,8 @@ struct Entertainment: Equatable {
         self.listType = listType
     }
 }
+
+extension Entertainment: Equatable { }
 
 extension Entertainment.ListType: Comparable {
     static func < (lhs: Entertainment.ListType, rhs: Entertainment.ListType) -> Bool {

@@ -34,7 +34,9 @@ extension TVShowsAPI: DependencyKey {
             topRatedTVShows: { try await fetchTVShows(endpoint: TopRatedTVShowsEndpoint(page: $0)) },
             nowPlayingTVShows: {
                 guard let dtoModel = try await networkService
-                    .performRequest(TopRatedMoviesEndpoint(page: $0), NowPlayingTVShowsResponseDTO.self) as? NowPlayingTVShowsResponseDTO else {
+                    .performRequest(
+                        TopRatedMoviesEndpoint(page: $0), NowPlayingTVShowsResponseDTO.self
+                    ) as? NowPlayingTVShowsResponseDTO else {
                     throw APIProviderError.dataConversionFailed
                 }
                 return Array<TVShow>(dtoModel: dtoModel)

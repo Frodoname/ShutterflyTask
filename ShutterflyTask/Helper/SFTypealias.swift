@@ -7,4 +7,9 @@
 
 import Foundation
 
-typealias EntertainmentBundle = (trendingMovies: [Movie], popularMovies: [Movie], trendingTVShows: [TVShow], popularTVShows: [TVShow])
+typealias EntertainmentBundle = (
+    trendingMovies: [Movie],
+    popularMovies: [Movie],
+    trendingTVShows: [TVShow],
+    popularTVShows: [TVShow]
+)

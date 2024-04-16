@@ -10,31 +10,31 @@ import Foundation
 final class EntertainmentDetailsCache {
     static let shared = EntertainmentDetailsCache()
     private let queue = DispatchQueue(label: "ShutterflyTask.teodor.com-entertainmentCache", attributes: .concurrent)
-    private var registry: [Int: EntertainmentDetailsBundle] = [:]
+    private var cache: [Int: EntertainmentDetailsBundle] = [:]
 
     private init() { }
 
     func set(_ value: EntertainmentDetailsBundle) {
         queue.async(flags: .barrier) {
-            self.registry[value.mainDetails.itemID] = value
+            self.cache[value.mainDetails.itemID] = value
         }
     }
     
     func get(_ value: Int) -> EntertainmentDetailsBundle? {
         queue.sync {
-            self.registry[value]
+            self.cache[value]
         }
     }
 
     func getAllData() -> [EntertainmentDetailsBundle] {
         queue.sync {
-            Array(self.registry.values)
+            Array(self.cache.values)
         }
     }
 
     func removeAllData() {
         queue.async(flags: .barrier) {
-            self.registry.removeAll()
+            self.cache.removeAll()
         }
     }
 }

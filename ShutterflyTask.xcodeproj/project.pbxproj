@@ -82,6 +82,9 @@
 		8945B93B2BCEC30B00E51EBD /* TrailerResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93A2BCEC30B00E51EBD /* TrailerResponseDTO.swift */; };
 		8945B93D2BCEC36900E51EBD /* TrailerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93C2BCEC36900E51EBD /* TrailerEndpoint.swift */; };
 		8945B93F2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */; };
+		8945B9432BCEE44E00E51EBD /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B9422BCEE44E00E51EBD /* Enviroment.swift */; };
+		8945B9482BCEE5DE00E51EBD /* VideoURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B9472BCEE5DE00E51EBD /* VideoURLBuilder.swift */; };
+		8945B94A2BCEE5EB00E51EBD /* ImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945B9492BCEE5EB00E51EBD /* ImageURLBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +162,11 @@
 		8945B93A2BCEC30B00E51EBD /* TrailerResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerResponseDTO.swift; sourceTree = "<group>"; };
 		8945B93C2BCEC36900E51EBD /* TrailerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerEndpoint.swift; sourceTree = "<group>"; };
 		8945B93E2BCEDB7700E51EBD /* NowPlayingTVShowsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingTVShowsResponseDTO.swift; sourceTree = "<group>"; };
+		8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseConfig.xcconfig; sourceTree = "<group>"; };
+		8945B9412BCEE40600E51EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8945B9422BCEE44E00E51EBD /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		8945B9472BCEE5DE00E51EBD /* VideoURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoURLBuilder.swift; sourceTree = "<group>"; };
+		8945B9492BCEE5EB00E51EBD /* ImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,7 @@
 		8945B8572BCD4F2600E51EBD /* ShutterflyTask */ = {
 			isa = PBXGroup;
 			children = (
+				8945B9412BCEE40600E51EBD /* Info.plist */,
 				8945B9002BCD9AC400E51EBD /* Helper */,
 				8945B8DA2BCD74FD00E51EBD /* Extension */,
 				8945B89C2BCD6B4F00E51EBD /* Service */,
@@ -216,7 +225,9 @@
 		8945B86A2BCD53CB00E51EBD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8945B9422BCEE44E00E51EBD /* Enviroment.swift */,
 				8945B85C2BCD4F2800E51EBD /* Assets.xcassets */,
+				8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */,
 				8945B8812BCD658900E51EBD /* Localizable.strings */,
 				8945B8742BCD564F00E51EBD /* Generated */,
 			);
@@ -417,7 +428,7 @@
 		8945B8E52BCD868E00E51EBD /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				8945B8E32BCD84EC00E51EBD /* URLBuilder.swift */,
+				8945B9442BCEE5C700E51EBD /* URLBuilder */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -542,6 +553,32 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		8945B9442BCEE5C700E51EBD /* URLBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				8945B9462BCEE5D600E51EBD /* Implementation */,
+				8945B9452BCEE5CF00E51EBD /* Configuration */,
+			);
+			path = URLBuilder;
+			sourceTree = "<group>";
+		};
+		8945B9452BCEE5CF00E51EBD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8945B8E32BCD84EC00E51EBD /* URLBuilder.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8945B9462BCEE5D600E51EBD /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				8945B9472BCEE5DE00E51EBD /* VideoURLBuilder.swift */,
+				8945B9492BCEE5EB00E51EBD /* ImageURLBuilder.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8945B8D92BCD745600E51EBD /* DataDecoder.swift in Sources */,
+				8945B94A2BCEE5EB00E51EBD /* ImageURLBuilder.swift in Sources */,
 				8945B8F72BCD992C00E51EBD /* TVShowsRepository.swift in Sources */,
 				8945B8DE2BCD80BF00E51EBD /* DataTaskExecutor.swift in Sources */,
 				8945B9182BCD9C0600E51EBD /* DetailsView.swift in Sources */,
@@ -653,6 +691,7 @@
 				8945B8902BCD672F00E51EBD /* Review.swift in Sources */,
 				8945B8D52BCD742C00E51EBD /* HTTPStatusCode.swift in Sources */,
 				8945B8AB2BCD6B9600E51EBD /* MoviesSearchResponseDTO.swift in Sources */,
+				8945B9482BCEE5DE00E51EBD /* VideoURLBuilder.swift in Sources */,
 				8945B88E2BCD672B00E51EBD /* EntertainmentDetails.swift in Sources */,
 				8945B9022BCD9ACF00E51EBD /* SFTypealias.swift in Sources */,
 				8945B9072BCD9B9600E51EBD /* MoviesView.swift in Sources */,
@@ -670,6 +709,7 @@
 				8945B8FA2BCD99E900E51EBD /* TabsView.swift in Sources */,
 				8945B8B32BCD6C4300E51EBD /* HTTPMethod.swift in Sources */,
 				8945B89B2BCD6A5200E51EBD /* Movie.swift in Sources */,
+				8945B9432BCEE44E00E51EBD /* Enviroment.swift in Sources */,
 				8945B9112BCD9BCF00E51EBD /* HomeView.swift in Sources */,
 				8945B8F52BCD992C00E51EBD /* MoviesRepository.swift in Sources */,
 				8945B8B02BCD6C3A00E51EBD /* Endpoint.swift in Sources */,
@@ -699,6 +739,7 @@
 /* Begin XCBuildConfiguration section */
 		8945B8612BCD4F2800E51EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -762,6 +803,7 @@
 		};
 		8945B8622BCD4F2800E51EBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8945B9402BCEE36400E51EBD /* BaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -826,6 +868,7 @@
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShutterflyTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -854,6 +897,7 @@
 				DEVELOPMENT_TEAM = 3G8VQ3U9D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShutterflyTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

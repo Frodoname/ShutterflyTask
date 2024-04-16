@@ -17,9 +17,3 @@ struct PopularMoviesEndpoint: EndpointProtocol {
         ]
     }
 }
-
-extension EndpointProtocol where Self == PopularMoviesEndpoint {
-    static func popularMovies(for page: Int) -> Self {
-        .init(page: page)
-    }
-}

@@ -19,9 +19,3 @@ struct SearchMoviesEndpoint: EndpointProtocol {
         ]
     }
 }
-
-extension EndpointProtocol where Self == SearchMoviesEndpoint {
-    static func search(for movie: String, on page: Int) -> Self {
-        .init(searchText: movie, page: page)
-    }
-}

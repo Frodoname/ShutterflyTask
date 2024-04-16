@@ -20,13 +20,3 @@ extension URLBuilder {
         return url
     }
 }
-
-struct VideoURLBuilder: URLBuilder {
-    static let baseURL = "https://www.youtube.com/embed/"
-    private init() { }
-}
-
-struct ImageURLBuilder: URLBuilder {
-    static let baseURL = "https://image.tmdb.org/t/p/w500"
-    private init() { }
-}

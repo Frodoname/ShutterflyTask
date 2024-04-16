@@ -24,7 +24,7 @@ extension EndpointProtocol {
     var baseURL: URL {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "api.themoviedb.org"
+        components.host = Environment.getValue(for: .baseURL)
         components.path = path
         components.queryItems = queryItems
         guard let url = components.url else {
@@ -44,7 +44,7 @@ extension EndpointProtocol {
     var headers: [String: String] {
         [
             "accept": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ODIyNzU5NDMzZDI2YjAzMzNjMWMyNmU5NDNhYzI2ZiIsInN1YiI6IjYyOTYwMWJhMWU5MjI1MDA5Y2RiMjVjZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fwaPeeIoWgLaOne9RijPxFgJ3lGKe75zdfx-XmnH0A4"
+            "Authorization": "Bearer \(Environment.getValue(for: .apiToken))"
         ]
     }
 }

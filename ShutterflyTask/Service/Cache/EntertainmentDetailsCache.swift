@@ -1,5 +1,5 @@
 //
-//  Cache.swift
+//  EntertainmentDetailsCache.swift
 //  ShutterflyTask
 //
 //  Created by Fed on 16.04.2024.
@@ -23,16 +23,6 @@ final class EntertainmentDetailsCache {
     func get(_ value: Int) -> EntertainmentDetailsBundle? {
         queue.sync {
             self.registry[value]
-        }
-    }
-
-    func delete(_ value: EntertainmentDetailsBundle) -> Bool {
-        queue.sync(flags: .barrier) {
-            guard let _ = self.registry[value.mainDetails.itemID] else {
-                return false
-            }
-            self.registry.removeValue(forKey: value.mainDetails.itemID)
-            return true
         }
     }
 

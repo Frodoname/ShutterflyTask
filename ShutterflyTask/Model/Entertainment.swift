@@ -30,3 +30,18 @@ struct Entertainment: Equatable {
         self.listType = listType
     }
 }
+
+extension Entertainment.ListType: Comparable {
+    static func < (lhs: Entertainment.ListType, rhs: Entertainment.ListType) -> Bool {
+        func priority(of type: Entertainment.ListType) -> Int {
+            switch type {
+                case .topRated: return 1
+                case .nowPlaying: return 2
+                case .popular: return 3
+                default: return 4
+            }
+        }
+        return priority(of: lhs) < priority(of: rhs)
+    }
+}
+

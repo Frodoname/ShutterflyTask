@@ -21,6 +21,7 @@ struct TVShowsCore {
     enum Action {
         case fetchAllTVShows
         case tvShowsResponse(Result<[TVShow], Error>)
+        case sortTVShows(Entertainment.ListType)
         case path(StackAction<DetailsCore.State, DetailsCore.Action>)
     }
     
@@ -43,6 +44,9 @@ struct TVShowsCore {
                 return .none
             case let .tvShowsResponse(.failure(error)):
                 debugPrint(error)
+                return .none
+            case .sortTVShows(let listType):
+                state.tvShows.sort { ($0.entertainment.listType == listType) && ($1.entertainment.listType != listType) }
                 return .none
             case .path:
                 return .none

@@ -16,12 +16,12 @@ struct MoviesCore {
         var pagination = PaginationData()
         var isLoading = false
         var isDataLoaded = false
-
     }
     
     enum Action {
         case fetchAllMovies
         case moviesResponse(Result<[Movie], Error>)
+        case sortMovies(Entertainment.ListType)
         case path(StackAction<DetailsCore.State, DetailsCore.Action>)
     }
     
@@ -44,6 +44,9 @@ struct MoviesCore {
                 return .none
             case let .moviesResponse(.failure(error)):
                 debugPrint(error)
+                return .none
+            case .sortMovies(let listType):
+                state.movies.sort { ($0.entertainment.listType == listType) && ($1.entertainment.listType != listType) }
                 return .none
             case .path:
                 return .none

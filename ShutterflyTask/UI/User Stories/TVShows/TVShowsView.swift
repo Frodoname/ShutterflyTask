@@ -15,6 +15,19 @@ struct TVShowsView: View {
         NavigationStackStore(store.scope(state: \.path, action: \.path)) {
             MoviesGridView(movies: store.tvShows)
                 .navigationTitle(Texts.tvShows)
+                .toolbar {
+                    Menu(Texts.sort) {
+                        Button(Texts.topRated) {
+                            store.send(.sortTVShows(.topRated))
+                        }
+                        Button(Texts.nowPlaying) {
+                            store.send(.sortTVShows(.nowPlaying))
+                        }
+                        Button(Texts.popular) {
+                            store.send(.sortTVShows(.popular))
+                        }
+                    }
+                }
                 .onAppear {
                     store.send(.fetchAllTVShows)
                 }

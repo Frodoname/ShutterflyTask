@@ -20,3 +20,7 @@
 "cast" = "Cast";
 "reviews" = "Reviews";
 "listIsEmpty" = "Your favorites list is empty";
+"topRated" = "Top Rated";
+"nowPlaying" = "Now playing";
+"popular" = "Popular";
+"sort" = "Sort";

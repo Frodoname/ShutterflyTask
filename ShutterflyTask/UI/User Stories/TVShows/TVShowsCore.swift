@@ -15,6 +15,7 @@ struct TVShowsCore {
         var tvShows: IdentifiedArrayOf<TVShow> = []
         var pagination = PaginationData()
         var isLoading = false
+        var isDataLoaded = false
     }
     
     enum Action {
@@ -29,6 +30,7 @@ struct TVShowsCore {
         Reduce { state, action in
             switch action {
             case .fetchAllTVShows:
+                guard !state.isDataLoaded else { return .none }
                 state.isLoading = true
                 return .run { [pagination = state.pagination] send in
                     let result = await tvShowsRepository.tvShowsData(pagination)
@@ -37,6 +39,7 @@ struct TVShowsCore {
             case let .tvShowsResponse(.success(tvShows)):
                 state.tvShows = IdentifiedArrayOf(uniqueElements: tvShows)
                 state.isLoading = false
+                state.isDataLoaded = true
                 return .none
             case let .tvShowsResponse(.failure(error)):
                 debugPrint(error)

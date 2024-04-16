@@ -21,7 +21,6 @@ struct DetailsCore {
         case fetchItemDetails
         case detailsResponse(Result<EntertainmentDetailsBundle, Error>)
         case toggleFavorite
-        case delegate(Delegate)
         
         enum Delegate {
             case toggleFavorite
@@ -48,14 +47,11 @@ struct DetailsCore {
                 debugPrint(error)
                 return .none
             case .toggleFavorite:
-                return .run { send in
-                    
-                    await send(.delegate(.toggleFavorite))
+                return .run { [id = state.details?.mainDetails.itemID] send in
+                    let result = detailsRepository.toggleFavorite(id)
+                    await send(.detailsResponse(result))
                 }
-            case .delegate:
-                return .none
             }
         }
     }
 }
-

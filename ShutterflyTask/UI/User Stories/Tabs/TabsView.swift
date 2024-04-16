@@ -25,7 +25,7 @@ struct TabsView: View {
                 .tabItem {
                     Label(Texts.tvShows, systemImage: "tv")
                 }
-            FavouritesView()
+            FavouritesView(store: store.scope(state: \.favourite, action: \.favourite))
                 .tabItem {
                     Label(Texts.favorite, systemImage: "star.fill")
                 }

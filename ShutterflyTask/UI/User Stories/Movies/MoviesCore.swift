@@ -15,6 +15,8 @@ struct MoviesCore {
         var movies: IdentifiedArrayOf<Movie> = []
         var pagination = PaginationData()
         var isLoading = false
+        var isDataLoaded = false
+
     }
     
     enum Action {
@@ -29,6 +31,7 @@ struct MoviesCore {
         Reduce { state, action in
             switch action {
             case .fetchAllMovies:
+                guard !state.isDataLoaded else { return .none }
                 state.isLoading = true
                 return .run { [pagination = state.pagination] send in
                     let result = await moviesRepository.moviesData(pagination)
@@ -37,6 +40,7 @@ struct MoviesCore {
             case let .moviesResponse(.success(movies)):
                 state.movies = IdentifiedArrayOf(uniqueElements: movies)
                 state.isLoading = false
+                state.isDataLoaded = true
                 return .none
             case let .moviesResponse(.failure(error)):
                 debugPrint(error)

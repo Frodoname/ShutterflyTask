@@ -22,6 +22,7 @@ struct HomeCore {
         var paginationData = PaginationData()
         var isLoading = false
         var isSearchLoading = false
+        var isDataLoaded = false
     }
     
     enum Action {
@@ -43,6 +44,7 @@ struct HomeCore {
         Reduce { state, action in
             switch action {
             case .fetchAllData:
+                guard !state.isDataLoaded else { return .none }
                 state.isLoading = true
                 return .run { [paginationData = state.paginationData] send in
                     let result = await homeRepository.homeScreenData(paginationData)
@@ -55,6 +57,7 @@ struct HomeCore {
                 state.trendingTVShows = IdentifiedArrayOf(uniqueElements: enertainmentBundle.trendingTVShows)
                 state.popularTVShows = IdentifiedArray(uniqueElements: enertainmentBundle.popularTVShows)
                 state.isLoading = false
+                state.isDataLoaded = true
                 return .none
             case let .dataResponse(.failure(error)):
                 state.isLoading = false
@@ -77,9 +80,6 @@ struct HomeCore {
                     await send(.searchResponse(result))
                 }
                 .debounce(id: CancelID.search, for: 0.5, scheduler: self.mainQueue)
-            case let .path(.element(id: id, action: .delegate(.toggleFavorite))):
-//                guard let detailsState = state.path[id: id] else { return .none }
-                return .none
             case .path:
                 return .none
             }

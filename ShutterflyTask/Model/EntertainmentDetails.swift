@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct EntertainmentDetails: Equatable {
+struct EntertainmentDetails {
+    let id: UUID
     let itemID: Int
     let title: String
     let image: URL?
@@ -17,6 +18,7 @@ struct EntertainmentDetails: Equatable {
     let isFavorite: Bool
     
     init(model: MovieDetailsDTO) {
+        self.id = .init()
         self.itemID = model.id
         self.title = model.title
         self.image = ImageURLBuilder.url(forPath: model.backdropPath)
@@ -27,6 +29,7 @@ struct EntertainmentDetails: Equatable {
     }
     
     init(model: TVShowDetailsDTO) {
+        self.id = .init()
         self.itemID = model.id
         self.title = model.name
         self.image = ImageURLBuilder.url(forPath: model.backdropPath)
@@ -37,6 +40,7 @@ struct EntertainmentDetails: Equatable {
     }
     
     init(
+        id: UUID,
         itemID: Int,
         title: String,
         image: URL?,
@@ -45,6 +49,7 @@ struct EntertainmentDetails: Equatable {
         trailerURL: URL?,
         isFavorite: Bool
     ) {
+        self.id = id
         self.itemID = itemID
         self.title = title
         self.image = image
@@ -55,9 +60,12 @@ struct EntertainmentDetails: Equatable {
     }
 }
 
+extension EntertainmentDetails: Equatable, Identifiable { }
+
 extension EntertainmentDetails {
     var toggleFavorite: Self {
         .init(
+            id: id,
             itemID: itemID,
             title: title,
             image: image,

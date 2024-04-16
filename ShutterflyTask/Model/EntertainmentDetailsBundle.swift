@@ -12,3 +12,10 @@ struct EntertainmentDetailsBundle: Equatable {
     let cast: [CastMember]
     let reviews: [Review]
 }
+
+extension EntertainmentDetailsBundle {
+    var toggleFavorite: Self {
+        let mainDetails = mainDetails.toggleFavorite
+        return .init(mainDetails: mainDetails, cast: cast, reviews: reviews)
+    }
+}
